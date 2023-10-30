@@ -18,8 +18,8 @@ int main(int, char**)
     long long argInt = 42;
 
     FuncDescription desc;
-    desc.addArg(argInt, LuaValueType::integer);
-    desc.addRetVal(rStr, LuaValueType::string);
+    desc.addArg(argInt);
+    desc.addRetVal(rStr);
 
     info = script.regFunc("HelloLua", desc);        // register lua defined function
     if(info != FuncInfoType::OK)
